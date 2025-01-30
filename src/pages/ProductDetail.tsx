@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Clock } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 // This would typically come from an API, using the product ID to fetch details
@@ -108,6 +108,11 @@ const ProductDetail = () => {
                 <div>
                   <h2 className="font-semibold mb-2">Origin</h2>
                   <p className="text-muted-foreground">{product.origin}</p>
+                </div>
+
+                <div className="flex items-center gap-2 text-green-600 font-medium">
+                  <Clock className="h-4 w-4" />
+                  <span>Get it in 10 minutes</span>
                 </div>
 
                 <Button 

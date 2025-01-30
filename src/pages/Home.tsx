@@ -3,32 +3,32 @@ import Navbar from "../components/layout/Navbar";
 import ProductCard from "../components/layout/ProductCard";
 import CategoryChip from "../components/layout/CategoryChip";
 
-const CATEGORIES = ["All", "New In", "Clothing", "Shoes", "Accessories"];
+const CATEGORIES = ["All", "Fresh", "Pantry", "Dairy", "Beverages"];
 
 const FEATURED_PRODUCTS = [
   {
     id: "1",
-    name: "Premium Cotton T-Shirt",
-    price: 49.99,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+    name: "Organic Avocados",
+    price: 4.99,
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
   },
   {
     id: "2",
-    name: "Designer Denim Jacket",
-    price: 199.99,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+    name: "Fresh Bread Loaf",
+    price: 3.49,
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff"
   },
   {
     id: "3",
-    name: "Classic Leather Boots",
-    price: 299.99,
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    name: "Organic Milk",
+    price: 5.99,
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150"
   },
   {
     id: "4",
-    name: "Silk Evening Dress",
-    price: 399.99,
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+    name: "Farm Fresh Eggs",
+    price: 6.99,
+    image: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7"
   }
 ];
 
@@ -41,7 +41,7 @@ const Home = () => {
       
       <main className="container mx-auto px-4 pt-24">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-6">Discover</h1>
+          <h1 className="text-4xl font-bold text-primary mb-6">Fresh Picks</h1>
           <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide">
             {CATEGORIES.map((category) => (
               <CategoryChip

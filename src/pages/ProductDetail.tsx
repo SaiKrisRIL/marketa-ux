@@ -13,6 +13,8 @@ const PRODUCT_DETAILS: Record<string, {
   description: string;
   nutrition: string;
   origin: string;
+  time_to_get: number;
+
 }> = {
   "1": {
     name: "Organic Avocados",
@@ -20,7 +22,8 @@ const PRODUCT_DETAILS: Record<string, {
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
     description: "Premium organic avocados, perfectly ripened and ready to eat. Rich in healthy fats and nutrients, these avocados are perfect for guacamole, salads, or as a nutritious spread.",
     nutrition: "Rich in healthy fats, fiber, and potassium",
-    origin: "California, USA"
+    origin: "California, USA",
+    time_to_get: 15
   },
   "2": {
     name: "Fresh Bread Loaf",
@@ -28,7 +31,8 @@ const PRODUCT_DETAILS: Record<string, {
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff",
     description: "Freshly baked artisanal bread made with organic flour. Crusty on the outside, soft and fluffy on the inside. Baked daily in our local bakery.",
     nutrition: "Source of complex carbohydrates and fiber",
-    origin: "Local Bakery"
+    origin: "Local Bakery",
+    time_to_get: 30
   },
   "3": {
     name: "Organic Milk",
@@ -36,7 +40,8 @@ const PRODUCT_DETAILS: Record<string, {
     image: "https://images.unsplash.com/photo-1550583724-b2692b85b150",
     description: "Fresh organic whole milk from grass-fed cows. No artificial hormones or antibiotics. Perfect for drinking, cooking, or your morning coffee.",
     nutrition: "Excellent source of calcium and vitamin D",
-    origin: "Local Dairy Farm"
+    origin: "Local Dairy Farm",
+    time_to_get: 20
   },
   "4": {
     name: "Farm Fresh Eggs",
@@ -44,7 +49,8 @@ const PRODUCT_DETAILS: Record<string, {
     image: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7",
     description: "Free-range eggs from locally raised hens. These eggs have bright orange yolks and are packed with protein and nutrients.",
     nutrition: "High in protein and omega-3 fatty acids",
-    origin: "Local Family Farm"
+    origin: "Local Family Farm",
+    time_to_get: 10
   }
 };
 
@@ -112,7 +118,7 @@ const ProductDetail = () => {
 
                 <div className="flex items-center gap-2 text-green-600 font-medium">
                   <Clock className="h-4 w-4" />
-                  <span>Get it in 10 minutes</span>
+                  <span>Get it in {product.time_to_get} minutes</span>
                 </div>
 
                 <Button 
